@@ -80,11 +80,7 @@ pipeline {
       }
     }
 
-    stage('Verify Deployment to Stage') {
-      steps {
-        verifyDeployment(projectName: env.STAGE, targetApp: env.APP_NAME)
-      }
-    }
+  
 
     stage('Promotion gate (Prod)') {
       steps {
@@ -100,11 +96,7 @@ pipeline {
       }
     }
 
-    stage('Verify Deployment to Prod') {
-      steps {
-        verifyDeployment(projectName: env.PROD, targetApp: env.APP_NAME)
-      }
-    }
+    
   }
 }
 
