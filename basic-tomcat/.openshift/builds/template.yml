@@ -95,15 +95,15 @@ parameters:
 - description: Source code repo for demo app
   name: APPLICATION_SOURCE_REPO
   required: true
-  value: https://github.com/openshift-s2i/s2i-wildfly
+  value: https://github.com/jboss-developer/jboss-eap-quickstarts
 - description: Source code branch/tag
   name: APPLICATION_SOURCE_REF
   required: true
-  value:  master
+  value:  openshift
 - description: Directory where POM file will be
   name: APPLICATION_CONTEXT_DIR
   required: true
-  value: s2i-wildfly/13.0/test/test-app
+  value: kitchensink
 - description: GitHub trigger secret
   from: '[a-zA-Z0-9]{8}'
   generate: expression
