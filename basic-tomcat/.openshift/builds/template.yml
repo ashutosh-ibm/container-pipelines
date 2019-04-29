@@ -124,4 +124,4 @@ parameters:
 - description: Image stream tag for the image you'd like to use to build the application
   name: IMAGE_STREAM_TAG_NAME
   required: true
-  value: jboss-webserver-3/webserver31-tomcat8-openshift:1.0
+  value: jboss-webserver31-tomcat8-openshift:1.0
