@@ -29,12 +29,28 @@ objects:
       spec:
         containers:
         - env:
-          - name: JWS_ADMIN_USERNAME
-            value: ${JWS_ADMIN_USERNAME}
-          - name: JWS_ADMIN_PASSWORD
-            value: ${JWS_ADMIN_PASSWORD}
+          - name: OPENSHIFT_KUBE_PING_LABELS
+            value: application=${APPLICATION_NAME}
+          - name: OPENSHIFT_KUBE_PING_NAMESPACE
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace
+          - name: HORNETQ_CLUSTER_PASSWORD
+            value: ${HORNETQ_CLUSTER_PASSWORD}
+          - name: HORNETQ_QUEUES
+            value: ${HORNETQ_QUEUES}
+          - name: HORNETQ_TOPICS
+            value: ${HORNETQ_TOPICS}
+          - name: JGROUPS_CLUSTER_PASSWORD
+            value: ${JGROUPS_CLUSTER_PASSWORD}
           image: ${APPLICATION_NAME}
           imagePullPolicy: Always
+          livenessProbe:
+            exec:
+              command:
+              - /bin/bash
+              - -c
+              - /opt/eap/bin/livenessProbe.sh
           name: ${APPLICATION_NAME}
           ports:
           - containerPort: 8778
@@ -43,12 +59,15 @@ objects:
           - containerPort: 8080
             name: http
             protocol: TCP
+          - containerPort: 8888
+            name: ping
+            protocol: TCP
           readinessProbe:
             exec:
               command:
               - /bin/bash
               - -c
-              - /opt/eap/bin/livenessProbe.sh
+              - /opt/eap/bin/readinessProbe.sh
         terminationGracePeriodSeconds: 600
     triggers:
     - imageChangeParams:
@@ -157,13 +176,12 @@ parameters:
 - description: Path to use for route.
   name: ROUTE_PATH
   value: /sample-jboss
-- description: JWS Admin User
+- description: Queue names
+  name: HORNETQ_QUEUES
+- description: Topic names
+  name: HORNETQ_TOPICS
+- description: HornetQ cluster admin password
   from: '[a-zA-Z0-9]{8}'
   generate: expression
-  name: JWS_ADMIN_USERNAME
-  required: true
-- description: JWS Admin Password
-  from: '[a-zA-Z0-9]{8}'
-  generate: expression
-  name: JWS_ADMIN_PASSWORD
+  name: HORNETQ_CLUSTER_PASSWORD
   required: true
