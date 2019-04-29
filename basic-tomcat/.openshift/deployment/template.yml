@@ -143,7 +143,7 @@ objects:
   metadata:
     creationTimestamp: null
     labels:
-      template: basic-tomcat-template
+      template: basic-tomcat1-template
     name: jenkins_edit
     namespace: ${APPLICATION_NAME}${ENV}
   roleRef:
@@ -169,7 +169,7 @@ parameters:
 - description: Namespace of service account that can deploy to this project
   name: SA_NAMESPACE
   required: true
-  value: basic-tomcat-build
+  value: basic-tomcat1-build
 - description: 'Custom hostname for http service route.  Leave blank for default hostname,
     e.g.: <application-name>-<project>.<default-domain-suffix>'
   name: HOSTNAME_HTTP
