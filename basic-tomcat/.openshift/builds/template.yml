@@ -75,7 +75,7 @@ parameters:
 - description: The name for the application.
   name: APPLICATION_NAME
   required: true
-  value: basic-tomcat
+  value: basic-tomcat1
 - description: The namespace to deploy into
   name: NAMESPACE
   required: true
