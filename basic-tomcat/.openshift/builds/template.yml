@@ -95,15 +95,15 @@ parameters:
 - description: Source code repo for demo app
   name: APPLICATION_SOURCE_REPO
   required: true
-  value: https://github.com/jboss-developer/ticket-monster.git
+  value: https://github.com/ashutosh-k78/sample-jboss
 - description: Source code branch/tag
   name: APPLICATION_SOURCE_REF
   required: true
-  value: 2.7.0.Final-with-tutorials
+  value: master
 - description: Directory where POM file will be
   name: APPLICATION_CONTEXT_DIR
   required: true
-  value: demo
+  value: webapp
 - description: GitHub trigger secret
   from: '[a-zA-Z0-9]{8}'
   generate: expression
