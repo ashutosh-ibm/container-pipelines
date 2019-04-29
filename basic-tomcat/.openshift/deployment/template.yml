@@ -175,7 +175,7 @@ parameters:
   name: HOSTNAME_HTTP
 - description: Path to use for route.
   name: ROUTE_PATH
-  value: /sample-jboss
+  value: /kitchensink
 - description: Queue names
   name: HORNETQ_QUEUES
 - description: Topic names
