@@ -1,2 +1,2 @@
-APPLICATION_NAME=basic-tomcat
+APPLICATION_NAME=basic-tomcat1
 ENV=-dev
