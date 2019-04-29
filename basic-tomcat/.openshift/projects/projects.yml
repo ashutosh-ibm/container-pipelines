@@ -4,24 +4,24 @@ items:
 - kind: ProjectRequest
   apiVersion: v1
   metadata:
-    name: basic-tomcat-dev
+    name: basic-tomcat1-dev
     creationTimestam: null
-  displayName: Basic Tomcat App - Dev
+  displayName: Basic Tomcat1 App - Dev
 - kind: ProjectRequest
   apiVersion: v1
   metadata:
-    name: basic-tomcat-stage
+    name: basic-tomcat1-stage
     creationTimestam: null
-  displayName: Basic Tomcat App - Stage
+  displayName: Basic Tomcat1 App - Stage
 - kind: ProjectRequest
   apiVersion: v1
   metadata:
-    name: basic-tomcat-prod
+    name: basic-tomcat1-prod
     creationTimestam: null
-  displayName: Basic Tomcat App - Prod
+  displayName: Basic Tomcat1 App - Prod
 - kind: ProjectRequest
   apiVersion: v1
   metadata:
-    name: basic-tomcat-build
+    name: basic-tomcat1-build
     creationTimestam: null
-  displayName: Basic Tomcat App - Build
+  displayName: Basic Tomcat1 App - Build
