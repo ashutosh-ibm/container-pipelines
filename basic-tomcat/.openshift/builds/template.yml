@@ -103,7 +103,7 @@ parameters:
 - description: Directory where POM file will be
   name: APPLICATION_CONTEXT_DIR
   required: true
-  value: 13.0/test/test-app
+  value: s2i-wildfly/13.0/test/test-app
 - description: GitHub trigger secret
   from: '[a-zA-Z0-9]{8}'
   generate: expression
