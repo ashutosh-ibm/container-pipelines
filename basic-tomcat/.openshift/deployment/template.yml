@@ -157,7 +157,7 @@ parameters:
   name: HOSTNAME_HTTP
 - description: Path to use for route.
   name: ROUTE_PATH
-  value: /ticket-monster
+  value: /sample-jboss
 - description: JWS Admin User
   from: '[a-zA-Z0-9]{8}'
   generate: expression
