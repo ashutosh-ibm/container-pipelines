@@ -165,7 +165,7 @@ parameters:
   name: HOSTNAME_HTTP
 - description: Path to use for route.
   name: ROUTE_PATH
-  value: /kitchensink
+  value: /helloworld
 - description: Queue names
   name: HORNETQ_QUEUES
 - description: Topic names
