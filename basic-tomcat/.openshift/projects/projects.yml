@@ -4,24 +4,24 @@ items:
 - kind: ProjectRequest
   apiVersion: v1
   metadata:
-    name: basic-tomcat1-dev
+    name: basic-wildfly-dev
     creationTimestam: null
-  displayName: Basic Tomcat1 App - Dev
+  displayName: Basic wildfly App - Dev
 - kind: ProjectRequest
   apiVersion: v1
   metadata:
-    name: basic-tomcat1-stage
+    name: basic-wildfly-stage
     creationTimestam: null
-  displayName: Basic Tomcat1 App - Stage
+  displayName: Basic wildfly App - Stage
 - kind: ProjectRequest
   apiVersion: v1
   metadata:
-    name: basic-tomcat1-prod
+    name: basic-wildfly-prod
     creationTimestam: null
-  displayName: Basic Tomcat1 App - Prod
+  displayName: Basic wildfly App - Prod
 - kind: ProjectRequest
   apiVersion: v1
   metadata:
-    name: basic-tomcat1-build
+    name: basic-wildfly-build
     creationTimestam: null
-  displayName: Basic Tomcat1 App - Build
+  displayName: Basic wildfly App - Build
