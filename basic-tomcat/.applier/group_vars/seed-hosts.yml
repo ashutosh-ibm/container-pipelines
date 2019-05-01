@@ -2,22 +2,22 @@
 openshift_cluster_content:
 - object: projectrequest
   content:
-  - name: basic-tomcat1-spaces
+  - name: basic-wildfly-spaces
     file: "{{ inventory_dir }}/../.openshift/projects/projects.yml"
     action: create
 - object: deployments
   content:
   - name: jenkins
-    namespace: basic-tomcat1-build
+    namespace: basic-wildfly-build
     template: openshift//jenkins-ephemeral
     params: "{{ inventory_dir }}/../.openshift/deployment/build/params"
-  - name: basic-tomcat1-dev
+  - name: basic-wildfly-dev
     template: "{{ inventory_dir }}/../.openshift/deployment/template.yml"
     params: "{{ inventory_dir }}/../.openshift/deployment/dev/params"
-  - name: basic-tomcat1-stage
+  - name: basic-wildfly-stage
     template: "{{ inventory_dir }}/../.openshift/deployment/template.yml"
     params: "{{ inventory_dir }}/../.openshift/deployment/stage/params"
-  - name: basic-tomcat1-prod
+  - name: basic-wildfly-prod
     template: "{{ inventory_dir }}/../.openshift/deployment/template.yml"
     params: "{{ inventory_dir }}/../.openshift/deployment/prod/params"
 - object: builds
