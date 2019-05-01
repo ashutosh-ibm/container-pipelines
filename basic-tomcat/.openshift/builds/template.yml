@@ -103,7 +103,7 @@ parameters:
 - description: Directory where POM file will be
   name: APPLICATION_CONTEXT_DIR
   required: true
-  value: .
+  value: webapp
 - description: GitHub trigger secret
   from: '[a-zA-Z0-9]{8}'
   generate: expression
