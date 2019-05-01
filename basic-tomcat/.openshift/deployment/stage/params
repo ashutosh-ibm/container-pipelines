@@ -1,2 +1,2 @@
-APPLICATION_NAME=basic-tomcat1
+APPLICATION_NAME=basic-wildfly
 ENV=-stage
