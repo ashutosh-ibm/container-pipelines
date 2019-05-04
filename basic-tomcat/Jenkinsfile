@@ -51,7 +51,7 @@ pipeline {
             cp -rfv ./${TARGET}/*.\$t oc-build/deployments/ 2> /dev/null || echo "No \$t files"
           done
         """
-        sh 'cp -rfv ./webapp oc-build/'
+        sh 'cp -rfv . oc-build/'
         sh 'ls oc-build/*'
         binaryBuild(projectName: env.BUILD, buildConfigName: env.APP_NAME, artifactsDirectoryName: "oc-build")
       }
