@@ -43,6 +43,7 @@ pipeline {
 
     stage('Build Container Image') {
       steps {
+        sh 'echo $PWD'
         sh """
           ls ${TARGET}/*
           rm -rf oc-build && mkdir -p oc-build/deployments
@@ -50,6 +51,8 @@ pipeline {
             cp -rfv ./${TARGET}/*.\$t oc-build/deployments/ 2> /dev/null || echo "No \$t files"
           done
         """
+        sh 'cp -rfv . oc-build/'
+        sh 'ls oc-build/*'
         binaryBuild(projectName: env.BUILD, buildConfigName: env.APP_NAME, artifactsDirectoryName: "oc-build")
       }
     }
