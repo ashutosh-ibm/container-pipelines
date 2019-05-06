@@ -31,6 +31,7 @@ pipeline {
 
     stage('Build') {
       steps {
+         sh 'echo $PWD'
         sh "mvn -B clean install -DskipTests=true -f ${POM_FILE}"
       }
     }
