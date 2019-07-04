@@ -31,7 +31,7 @@ pipeline {
     stage('Build Container Image') {
       steps {
         sh 'echo present working directory is $PWD'
-        binaryBuild(projectName: env.BUILD, buildConfigName: env.APP_NAME, artifactsDirectoryName: ${PWD})
+        binaryBuild(projectName: env.BUILD, buildConfigName: env.APP_NAME, artifactsDirectoryName: "${PWD}")
       }
     }
 
